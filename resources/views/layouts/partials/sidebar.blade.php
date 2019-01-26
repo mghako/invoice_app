@@ -73,6 +73,23 @@
                 </li> -->
             </ul>
         </li>
+        <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-cogs text-warning"></i>
+                <p>
+                Shwe Taung Invoice
+                <i class="right fa fa-angle-left"></i>
+                </p>
+            </a>
+            <ul class="nav nav-treeview ml-3">
+                <li class="nav-item">
+                <a href="{{ route('shwetaungenergy_invoice_npt.index') }}" class="nav-link">
+                <i class="nav-icon fas fa-receipt"></i>
+                    <p>Naypyitaw</p>
+                </a>
+                </li>
+            </ul>
+        </li>
         <li class="nav-item">
         <a href="#" class="nav-link">
             <i class="nav-icon fa fa-th"></i>

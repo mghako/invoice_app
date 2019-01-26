@@ -16,3 +16,5 @@ Route::resource('terminal_invoice', 'TerminalInvoiceController');
 Route::resource('terminal_invoice_npt', 'TerminalNptInvoiceController');
 
 Route::resource('topstar_invoice_npt', 'TopstarNptInvoiceController');
+
+Route::resource('shwetaungenergy_invoice_npt', 'ShwetaungenergyNptInvoiceController');
