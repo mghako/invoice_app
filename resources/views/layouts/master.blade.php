@@ -68,7 +68,7 @@
 
       <!-- Sidebar Menu -->
       <nav class="mt-2">
-       @include('layouts.partials.sidebar');
+       @include('layouts.partials.sidebar')
       </nav>
       <!-- /.sidebar-menu -->
     </div>
@@ -99,7 +99,7 @@
     <div class="content">
       <div class="container-fluid">
             <div class="row">
-                @yield('content');
+                @yield('content')
             </div>
         
         <!-- /.row -->

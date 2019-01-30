@@ -10,19 +10,19 @@
     <p class="text-center"><img src="/img/petrol_station_icon.png" alt="" width="25px" class="petrol_station_icon"> <span class="voucher_mid_txt"><u>Voucher</u></span> <span><strong>Cash</strong></span></p>    
     <table class="table customer_info no-border" border="0">
         <tr>
-            <td width="70px"><strong>Car No:</strong></td>
-            <td> <span>{{ $invoice->car_no }}</span> </td>
+            <td width="80px" class="p0"><strong>Car No:</strong></td>
+            <td><span>{{ $invoice->car_no }}</span></td>
             <td id="customer_date_info"><strong>Date:</strong></td>
             <td><span><strong>&nbsp;{{ $invoice->date }}</strong></span></td>
         </tr>
     </table>
     <table class="table no-border voucher_info">
         <tr>
-            <td colspan="2" class="no_border">Vr No: &nbsp;&nbsp;&nbsp;INV-2019010600436</td>
+            <td colspan="2" class="no_border">Vr No: &nbsp;&nbsp;&nbsp;{{ $invoice->voucher_no }}</td>
             <td colspan="2" class="">Cashier: &nbsp;&nbsp;admin</td>
         </tr>
         <tr>
-            <td colspan="2" class="no_border">Att Name: &nbsp;Administrator</td>
+            <td colspan="2" class="no_border">Att Name: &nbsp;{{ $invoice->att_name }}</td>
             <td colspan="2" class=" no_border">Pump {{ $invoice->pump_no }}</td>
         </tr>
     </table>
@@ -49,7 +49,7 @@
             <td class="low-padding-top">{{ $invoice->amount}}</td>
         </tr>
     </table>
-    <p class="text-center amount_in_kyats">Thank You <br> See you again. Have a nice Day!</p>
+    <p class="text-center amount_in_kyats">Thank You <br> See You Again. Have a nice Day!</p>
 
 
     <!-- this row will not appear when printing -->

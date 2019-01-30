@@ -4,7 +4,7 @@
 <div class="invoice voucher_container">
     <div class="top_title">
         <h3>Terminal 201 ({{ $invoice->location }})</h3>
-        <h3>PH  09-797989113</h3>
+        <h3>PH 09-977838201</h3>
     <h3><em><strong>{{ $invoice->petrol_type }}</strong></em></h3>
     </div>
     <table class="station_info">
@@ -44,7 +44,7 @@
         </tr>
     </table>
     <br>
-    <p class="text-center">{{ $invoice->price_in_kyats }}</p>
+    <p class="text-center">က်ပ္ - {{ $invoice->price_in_kyats }} - တိတိ</p>
     <p class="text-center">Thanks You</p>
 
 

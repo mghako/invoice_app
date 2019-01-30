@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\ShwetaungenergyNptInvoice;
+use Illuminate\Support\Facades\DB;
 
 class ShwetaungenergyNptInvoiceController extends Controller
 {
@@ -14,8 +15,10 @@ class ShwetaungenergyNptInvoiceController extends Controller
      */
     public function index()
     {
-        $invoices = ShwetaungenergyNptInvoice::paginate(10);
-        return view('shwetaungenergyInvoiceNpt.index', compact('invoices'));
+        $invoices = ShwetaungenergyNptInvoice::orderBy('id', 'DESC')->paginate(8);
+        // $invoices = DB::table('shwetaungenergy_npt_invoices')->simplePaginate(8);
+        // $invoices = ShwetaungenergyNptInvoice::paginate(10);
+        return view('shwetaungenergyInvoiceNpt.index',  ['invoices' => $invoices]);
     }
 
     /**
@@ -25,7 +28,7 @@ class ShwetaungenergyNptInvoiceController extends Controller
      */
     public function create()
     {
-        //
+        return view('shwetaungenergyInvoiceNpt.create');
     }
 
     /**
@@ -36,7 +39,20 @@ class ShwetaungenergyNptInvoiceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $invoice = ShwetaungenergyNptInvoice::create([
+            'grade'=> $request->grade,
+            'voucher_no'=> $request->voucher_no,
+            'pump_no' => $request->pump_no,
+            'date' => $request->date,
+            'car_no' => $request->car_no,
+            'gallon' => $request->gallon,
+            'liter' => $request->liter,
+            'price' => $request->price,
+            'amount' => $request->amount,
+            'att_name' => $request->att_name
+        ]);
+        $invoice->save();
+        return redirect()->route('shwetaungenergy_invoice_npt.index');
     }
 
     /**
@@ -82,6 +98,8 @@ class ShwetaungenergyNptInvoiceController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $invoice = ShwetaungenergyNptInvoice::findOrFail($id);
+        $invoice->delete();
+        return view('shwetaungenergyInvoiceNpt.index');
     }
 }

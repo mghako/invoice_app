@@ -70,12 +70,14 @@
         }
         #border_bot {
             border-bottom: 1px solid #000;
-            text-underline-position: under
+            text-underline-position: under;
         }
+
         .customer_info {
-            font-size: 16px;
+            font-size: 14px;
             margin-left: 3mm;
         }
+
         td#customer_date_info {
             padding-left: 5mm;
         }
